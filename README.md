@@ -1,24 +1,5 @@
-# README
+A Rails application created as part of work with the Odin Project.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Users can log in to the site and write posts. Any visitor to the site can see the content of the posts; however, only logged-in members can post or see the author of any post.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+This is Members Only "Redux" because I am returning to the Odin Project after a brief hiatus and want to redo the most recent project I've finished before I move on.
