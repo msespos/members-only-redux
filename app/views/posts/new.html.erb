@@ -1,6 +1,15 @@
 <h1>Make a new post!</h1>
+
 <%= form_with model: @post, local: true do |f| %>
-  <%= f.label :post %>
-  <%= f.text_area :post %>
+  <%= f.label :body %><br>
+  <%= f.text_area :body %><br>
   <%= f.submit %>
-<% end %>
+<% end %><br>
+
+<%= button_to "logout", destroy_user_session_path, method: :delete %><br>
+
+<% if flash.key? :error %>
+  <p><%= flash[:error] %></p>
+<% end %><br>
+
+<%= current_user.email %>

@@ -1,2 +1,7 @@
 <h1>Posts#index</h1>
-<p>Find me in app/views/posts/index.html.erb</p>
+
+<% if flash.key? :success %>
+  <p><%= flash[:success] %></p>
+<% end %><br>
+
+<%= current_user.email %>
