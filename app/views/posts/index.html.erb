@@ -4,4 +4,8 @@
   <p><%= flash[:success] %></p>
 <% end %><br>
 
-<%= current_user.email %>
+<%= current_user.email if current_user %>
+
+<% @posts.each do |p| %>
+  <%= p.body %><br>
+<% end %>
