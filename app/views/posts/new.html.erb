@@ -1,9 +1,13 @@
+<div class="just-back-button-header">
+    <%= button_to "back to posts", root_path, method: :get, class:"button" %>
+</div>
+
 <h1>Make a new post!</h1>
 
-<%= form_with model: @post, local: true do |f| %>
-  <%= f.label :body %><br>
-  <%= f.text_area :body %><br>
-  <%= f.submit %>
+<%= form_with model: @post, local: true, class:"post-form" do |f| %>
+  <%= f.label :body, class:"label" %><br>
+  <%= f.text_area :body, class:"text-area" %><br>
+  <%= f.submit "Post it!", class:"submit" %>
 <% end %><br>
 
 <%= button_to "logout", destroy_user_session_path, method: :delete %><br>
