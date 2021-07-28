@@ -17,11 +17,13 @@
   </div>
 <% end %>
 
-<h1>The Posts</h1>
-
 <% if flash.key? :success %>
-  <p><%= flash[:success] %></p>
+  <h2><%= flash[:success] %></h2>
 <% end %><br>
+
+<%= current_user.email if current_user %><br><br>
+
+<h1>The Posts</h1>
 
 <div class="post-boxes-container">
   <% @posts.each do |p| %>
@@ -38,5 +40,3 @@
     </div>
   <% end %>
 </div>
-
-<%= current_user.email if current_user %><br><br>
