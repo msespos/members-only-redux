@@ -6,8 +6,6 @@
   <h2><%= flash[:error] %></h2>
 <% end %><br>
 
-<%= current_user.email if current_user %>
-
 <h1>Make a new post!</h1>
 
 <%= form_with model: @post, local: true, class:"post-form" do |f| %>
@@ -16,4 +14,6 @@
   <%= f.submit "Post it!", class:"submit" %>
 <% end %><br>
 
-<%= button_to "logout", destroy_user_session_path, method: :delete %><br>
+<%= button_to "logout", destroy_user_session_path, method: :delete %><br><br>
+
+<%= current_user.email if current_user %>
